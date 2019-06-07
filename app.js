@@ -26,3 +26,16 @@ for (let i = 0; i < content.length; i++) {
   tr.appendChild(td2);
   table.appendChild(tr);
 };
+
+function childClass() {
+  const check = document.querySelector('input');
+  const notroot = document.querySelector('#notroot');
+  const span = notroot.children[0];
+  //or just :
+  //const span = document.querySelector('span');
+  if (check.checked === true) {
+    span.setAttribute("class", "childClass");
+  } else {
+    span.removeAttribute("class");
+  }
+}
