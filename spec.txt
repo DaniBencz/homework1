@@ -1,0 +1,6 @@
+Juhász Péter [3:11 PM]
+tábla headerje: ['Name','Age'], tábla tartalma: [{name:'asd',age:2},{name:'qwe',age:3}]
+igen, de ezért használunk library-t
+
+illetve akkor legyen még egy olyan feladatod, hogy
+<div id="notroot"><span>asd</span></div> kódban a "notroot" id-jû osztály elsõ gyermekének vegyél fel egy új class-t, pl a "childClass" nevû osztályt, ahol a CSS class legyen .childClass{color:blue}
