@@ -26,3 +26,14 @@ for (let i = 0; i < content.length; i++) {
   tr.appendChild(td2);
   table.appendChild(tr);
 };
+
+/*
+alternatively:
+let innerHTML = "<tbody>";
+innerHTML = innerHTML + "<tr><th>"+header[0]+"</th><th>"+header[1]+"</th></tr>";
+for (let i = 0; i < content.length; i++){
+	innerHTML = innerHTML + "<tr><td>"+content[i].name+"</td><td>"+content[i].age+"</td></tr>";
+}
+innerHTML = innerHTML + "</tbody>";
+table.innerHTML = innerHTML;
+*/
