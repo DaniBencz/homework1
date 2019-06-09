@@ -1,7 +1,11 @@
 'use strict';
 
-const header = ['Name', 'Age'];
-const content = [{ name: 'asd', age: 2 }, { name: 'qwe', age: 3 }];
+const header = ['Name', 'Age', 'Gender'];
+const content = [
+  { name: 'asd', age: 2, gender: 'm' },
+  { name: 'qwe', age: 3, gender: 'f' },
+  { name: 'foo', age: 4, gender: 'f' },
+];
 
 let table = document.querySelector('table');
 
@@ -17,6 +21,18 @@ tr1.appendChild(th2);
 table.appendChild(tr1);
 
 for (let i = 0; i < content.length; i++) {
+  let tr = document.createElement('tr');
+  let tempObj = content[i];
+  let tempArr = Object.values(tempObj);
+  for (let j = 0; j < tempArr.length; j++) {
+    let td = document.createElement('td');
+    td.textContent = tempArr[j];
+    tr.appendChild(td);
+  }
+  table.appendChild(tr);
+};
+
+/* for (let i = 0; i < content.length; i++) {
   let td1 = document.createElement('td');
   td1.textContent = content[i].name;
   let td2 = document.createElement('td');
@@ -25,7 +41,7 @@ for (let i = 0; i < content.length; i++) {
   tr.appendChild(td1);
   tr.appendChild(td2);
   table.appendChild(tr);
-};
+}; */
 
 function childClass() {
   const check = document.querySelector('input');
